@@ -1,25 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Bootstrap 4 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'lib\bootstrap-5.1.0-dist\css\bootstrap.min.css' %}">
+  <script src="{% static 'lib\bootstrap-5.1.0-dist\js\bootstrap.bundle.min.js' %}"></script>
 </head>
 <body>
-    <h1>
-        MI PRIMER PÁGINA WEB
-    </h1>
-    
-    {% block content %}
-    <a href="{% url 'erp:vista2'%}">Dos</a>
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.id }} / {{ category.name }}</li>        
-        {% endfor %}
-    </ul>
-    {% endblock content %}
-        
-    <p>{{name}}</p>
+
+<div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p>
+  <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary">Left</button>
+      <button type="button" class="btn btn-primary">Middle</button>
+      <button type="button" class="btn btn-primary">Right</button>
+    </div>
+</div>
+
+<img src="{% static 'img\103310_avatar_icon.png' %}" class="img-fluid img-thumbnail">
 </body>
-</html>
+</html> 
