@@ -12,13 +12,19 @@
 
 
 {% block rows %}
-    {% for c in categories %}
+    {% for c in object_list %}
     <tr>
         <td>{{  c.id }}</td>
         <td>{{ c.name }}</td>
         <td>
             <button type="button" class="btn btn-xs bg-warning"><i class="fas fa-edit"></i></button>
             <button type="button" class="btn btn-xs bg-danger"><i class="fas fa-trash-alt"></i></button>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td>
+            Aun no hay categorias
         </td>
     </tr>
     {% endfor %}
