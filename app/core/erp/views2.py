@@ -8,7 +8,7 @@ def myfirstview(request):
         'categories': Category.objects.all()
     }
 
-    return render(request, 'home.html', data)
+    return render(request, 'index.html', data)
 
 def mysecondview(request):
     data = {
