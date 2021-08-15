@@ -5,6 +5,7 @@
     <tr>
         <th>Nro.</th>
         <th>Nombre</th>
+        <th>Descripción</th>
         <th>Opciones</th>
     </tr>
 {% endblock columns %}
@@ -16,6 +17,7 @@
     <tr>
         <td>{{  c.id }}</td>
         <td>{{ c.name }}</td>
+        <td>{{ c.desc }}</td>
         <td>
             <button type="button" class="btn btn-xs bg-warning"><i class="fas fa-edit"></i></button>
             <button type="button" class="btn btn-xs bg-danger"><i class="fas fa-trash-alt"></i></button>
@@ -34,6 +36,7 @@
     <tr>
         <th>Nro.</th>
         <th>Nombre</th>
+        <th>Descripción</th>
         <th>Opciones</th>
     </tr>
 {% endblock tfoot %}

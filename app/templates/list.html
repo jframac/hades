@@ -37,9 +37,9 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-            <button class="btn btn-primary">
+            <a  href="{{ create_url }}" class="btn btn-primary btnTest">
                 <i class="fas fa-plus"></i> Nuevo registro
-            </button>
+            </a>
         </div>
     </div>
 {% endblock content %}
@@ -53,6 +53,21 @@
             "url": "{% static 'lib/Datatable-Spanish.json' %}"
         }
         });
+
+        $('.btnTest').on('click', function () {
+            $.ajax({
+                url: '{% url 'erp:category_list' %}',
+                type: 'POST',
+                data: {id: 1},
+                dataType: 'json',
+            }).done(function(data) {
+                console.log(data);
+            }).fail(function(jqXHR, textStatus, errorThrown ) {
+                alert( textStatus+ ': '+errorThrown);
+            }).always(function(data) {
+                
+            });
+        })
     });
 </script>
 {% endblock javascript %}
