@@ -150,3 +150,5 @@ dmypy.json
 cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+app/templates/{% static 'lib/bootstrap-5.1.0-dist/css/bootstrap.min.css' %}
+app/static/img/103310_avatar_icon.png
